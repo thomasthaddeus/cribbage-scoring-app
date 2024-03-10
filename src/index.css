@@ -11,3 +11,87 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Resetting default browser styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and font setup */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333; /* Default text color */
+  background-color: #f8f8f8; /* Light background for the app */
+}
+
+/* Container for centering the app content */
+.container {
+  max-width: 1200px; /* Max width for large screens */
+  margin: 0 auto; /* Centering */
+  padding: 20px;
+}
+
+/* Basic typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: #222; /* Slightly darker than default text */
+}
+
+h1 {
+  font-size: 2.25rem; /* 36px */
+}
+
+h2 {
+  font-size: 1.75rem; /* 28px */
+}
+
+p, a, button, input, select, textarea {
+  font-size: 1rem; /* 16px */
+  color: inherit; /* Inherits from parent color, for better flexibility */
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button styling */
+button {
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
