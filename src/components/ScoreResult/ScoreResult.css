@@ -1,1 +1,70 @@
-.ScoreResult {}
+.score-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.score-card-header h2,
+.score-group h4 {
+  margin: 0;
+}
+
+.score-total {
+  min-width: 96px;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.18), rgba(45, 212, 191, 0.18));
+  text-align: center;
+}
+
+.score-total span {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(248, 250, 252, 0.7);
+}
+
+.score-total strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 2rem;
+}
+
+.score-breakdown {
+  display: grid;
+  gap: 1rem;
+}
+
+.score-group {
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.score-group ul {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.score-group li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.score-group li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.empty-copy {
+  margin: 0;
+  color: rgba(248, 250, 252, 0.75);
+  line-height: 1.5;
+}

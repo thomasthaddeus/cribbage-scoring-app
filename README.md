@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# Cribbage Scoring App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React + TypeScript app for scoring a cribbage hand, the crib, and the starter card from a single screen.
 
-## Available Scripts
+## What The App Does
 
-In the project directory, you can run:
+The app lets you:
 
-### `npm start`
+- Enter a 4-card player hand
+- Enter a 4-card crib
+- Choose a starter card
+- Score the hand and crib separately
+- See a scoring breakdown for fifteens, pairs, runs, flushes, and nobs
+- Catch duplicate card selections before trusting the result
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The player hand uses normal cribbage hand rules, and the crib uses crib-specific flush rules.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- React 19
+- TypeScript
+- Vite
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Local Development
 
-### `npm run build`
+Install dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run dev
+```
 
-### `npm run eject`
+Vite will print a local URL, typically `http://localhost:5173`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Production Build
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Build the app:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Preview the production build locally:
 
-## Learn More
+```bash
+npm run preview
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## How To Use It
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Select the four cards in the player hand section.
+2. Select the four cards in the crib section if you want to score the crib too.
+3. Choose the starter card.
+4. Review the score panels for the hand and crib totals.
+5. Check the scoring breakdown to see exactly where each point came from.
+
+If the app reports duplicate cards, update the selections until each physical card appears only once.
+
+Use the `Clear all cards` button to reset the board and start a new score.
+
+## Scoring Supported
+
+The scoring engine currently handles:
+
+- Fifteens
+- Pairs
+- Runs
+- Flushes
+- Nobs
+
+## Project Structure
+
+Important files:
+
+- `src/components/HomePage/HomePage.tsx` manages app state and score calculation
+- `src/components/PlayerHand/PlayerHand.tsx` renders player hand inputs
+- `src/components/Crib/Crib.tsx` renders crib inputs
+- `src/components/DrawCard/DrawCard.tsx` renders starter card inputs
+- `src/components/ScoreResult/ScoreResult.tsx` renders totals and scoring details
+- `src/utils/scoringLogic.ts` contains the cribbage scoring rules
+
+## Possible Next Steps
+
+- Add automated tests for known cribbage hands
+- Add faster card selection with visual card buttons
+- Add example hands for quick QA
+- Add pegging score helpers

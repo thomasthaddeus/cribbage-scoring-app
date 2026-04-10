@@ -1,1 +1,89 @@
-.HomePage {}
+.home-page {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.hero-panel,
+.warning-card {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(15, 23, 42, 0.68);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px);
+}
+
+.hero-panel {
+  border-radius: 28px;
+  padding: 2rem;
+}
+
+.eyebrow,
+.panel-label {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fbbf24;
+}
+
+.hero-panel h1 {
+  margin: 0;
+  max-width: 18ch;
+  font-size: clamp(2.4rem, 5vw, 4.75rem);
+  line-height: 0.95;
+}
+
+.hero-copy {
+  margin: 1rem 0 0;
+  max-width: 44rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(248, 250, 252, 0.82);
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+}
+
+.secondary-button {
+  padding: 0.9rem 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  align-items: start;
+}
+
+.board-column,
+.results-column {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.warning-card {
+  border-radius: 24px;
+  padding: 1.2rem 1.25rem;
+  color: #fde68a;
+}
+
+.warning-card h2,
+.warning-card p {
+  margin: 0;
+}
+
+.warning-card p + p {
+  margin-top: 0.55rem;
+}
+
+@media (max-width: 900px) {
+  .workspace-grid {
+    grid-template-columns: 1fr;
+  }
+}

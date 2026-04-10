@@ -1,1 +1,11 @@
-import React from 'react'; \n\nexport default function App() { \n  return <div>App</div>; \n }
+import React from 'react';
+import HomePage from '../HomePage/HomePage';
+import './App.css';
+
+export default function App() {
+  return (
+    <div className="app-shell">
+      <HomePage />
+    </div>
+  );
+}
